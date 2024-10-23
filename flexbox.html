@@ -10,74 +10,76 @@ Chrome 和 Firefox。
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-    /* CSS 样式 */
+    <style>
+        /* CSS 样式 */
 
-    /* 重置一些默认样式 */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        /* 重置一些默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-    /* 最外层容器样式 */
-    .container {
-        display: flex;
-        /* 使用 Flexbox 创建横向布局 */
-        min-height: 100vh;
-        /* 设置最小高度为视口高度，保证页面占满整个屏幕 */
-        flex-direction: row;
-        /* 默认横向排列 */
-    }
-
-    /* 侧边栏样式 */
-    .sidebar {
-        background-color: #333;
-        color: #fff;
-        width: 250px;
-        /* 固定宽度的侧边栏 */
-        padding: 20px;
-    }
-
-    /* 主内容区域样式 */
-    .main-content {
-        background-color: #f4f4f4;
-        flex: 1;
-        /* 使用 flex-grow 属性让主内容区域自适应宽度 */
-        padding: 20px;
-    }
-
-    /* 响应式设计 - 小屏幕样式 */
-    @media (max-width: 768px) {
+        /* 最外层容器样式 */
         .container {
-            flex-direction: column;
-            /* 当屏幕宽度小于 768px 时，将 Flexbox 布局改为纵向排列 */
+            display: flex;
+            /* 使用 Flexbox 创建横向布局 */
+            min-height: 100vh;
+            /* 设置最小高度为视口高度，保证页面占满整个屏幕 */
+            flex-direction: row;
+            /* 默认横向排列 */
         }
 
+        /* 侧边栏样式 */
         .sidebar {
-            width: 100%;
-            /* 让侧边栏宽度自适应屏幕宽度 */
-            text-align: center;
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            /* 固定宽度的侧边栏 */
+            padding: 20px;
         }
-    }
 
-    /* 详细注释 */
-    /*
+        /* 主内容区域样式 */
+        .main-content {
+            background-color: #f4f4f4;
+            flex: 1;
+            /* 使用 flex-grow 属性让主内容区域自适应宽度 */
+            padding: 20px;
+        }
+
+        /* 响应式设计 - 小屏幕样式 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                /* 当屏幕宽度小于 768px 时，将 Flexbox 布局改为纵向排列 */
+            }
+
+            .sidebar {
+                width: 100%;
+                /* 让侧边栏宽度自适应屏幕宽度 */
+                text-align: center;
+            }
+        }
+
+        /* 详细注释 */
+        /*
 1. .container 使用 Flexbox 创建横向布局，主内容区域自动适应宽度。
 2. .sidebar 侧边栏保持固定宽度 250px，包含一些填充（padding），以确保内容不紧贴边缘。
 3. .main-content 通过 flex: 1 使其在容器内占据剩余空间。
 4. 在小屏幕（宽度小于 768px）下，使用 media query 将侧边栏变为顶部布局，宽度改为 100%。
 */
-</style>
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">Sidebar Content</div>
