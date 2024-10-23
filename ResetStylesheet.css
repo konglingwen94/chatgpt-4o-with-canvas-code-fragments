@@ -1,0 +1,85 @@
+/* CSS 重置样式表 */
+
+/* 全局选择器，重置所有元素的默认 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 使用边框盒模型，确保宽度和高度包含 padding 和 border */
+}
+
+/* HTML 和 body 标签，设置基础样式 */
+html {
+  font-size: 100%; /* 设置基础字体大小为 100% */
+  line-height: 1.15; /* 设置基础行高 */
+  -webkit-text-size-adjust: 100%; /* 禁用 iOS 上的字体大小自动调整 */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* 设置默认字体族 */
+  line-height: 1.6; /* 设置默认行高 */
+  text-rendering: optimizeLegibility; /* 提升文本的可读性 */
+}
+
+/* 常见块级元素，重置为标准化的块级行为 */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* 标题和段落元素，去掉默认的 margin */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, figure {
+  margin: 0;
+}
+
+/* 列表元素，去掉默认的内外边距和样式 */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* 移除默认的列表样式 */
+}
+
+/* 链接元素，移除下划线和默认颜色 */
+a {
+  text-decoration: none;
+  color: inherit; /* 继承父元素的颜色 */
+}
+
+/* 图片元素，防止超过父容器宽度 */
+img {
+  max-width: 100%; /* 限制图片最大宽度为 100% */
+  height: auto; /* 保持图片的纵横比 */
+  border-style: none; /* 移除默认的边框样式 */
+}
+
+/* 表格元素，移除间距并合并边框 */
+table {
+  border-collapse: collapse; /* 合并表格边框 */
+  border-spacing: 0; /* 去掉表格单元格之间的间距 */
+}
+
+/* 表单元素，重置默认样式并继承字体 */
+button, input, select, textarea {
+  font-family: inherit; /* 继承父元素的字体族 */
+  font-size: 100%; /* 设置字体大小为继承的 100% */
+  margin: 0; /* 去掉默认的 margin */
+}
+
+/* 设置按钮的样式，确保没有默认的边框和背景 */
+button {
+  background: none;
+  border: none;
+  cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+/* 详细注释：
+1. * 通配符选择器用于统一重置所有元素的 margin 和 padding，并启用边框盒模型。
+2. html 和 body 标签设置基础的字体和行高，提供一致的文本基础。
+3. 块级元素如 article、header 等确保在所有浏览器中表现为块级。
+4. 标题和段落元素重置 margin，确保布局的一致性。
+5. 列表元素移除默认样式，适合自定义列表样式。
+6. 链接元素去掉下划线，并继承父元素的颜色，方便统一管理。
+7. 图片元素设置最大宽度和自动高度，防止布局溢出。
+8. 表格元素合并边框，消除默认的单元格间距。
+9. 表单元素继承字体族和大小，确保一致的用户体验。
+10. 按钮元素去掉默认边框和背景，使其样式更加灵活可控。
+*/
