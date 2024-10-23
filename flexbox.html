@@ -10,6 +10,9 @@ Chrome 和 Firefox。
 <!DOCTYPE html>
 
 <html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
     /* CSS 样式 */
 
@@ -74,7 +77,7 @@ Chrome 和 Firefox。
 4. 在小屏幕（宽度小于 768px）下，使用 media query 将侧边栏变为顶部布局，宽度改为 100%。
 */
 </style>
-
+</head>
 <body>
     <div class="container">
         <div class="sidebar">Sidebar Content</div>
@@ -83,3 +86,8 @@ Chrome 和 Firefox。
 </body>
 
 </html>
+
+<!-- 
+
+问题记录：经PC浏览器模拟器测试，响应式布局不支持移动端
+ -->
